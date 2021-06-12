@@ -8,9 +8,13 @@ public class PlayerController : MonoBehaviour
     Vector2 inputMov;
     Vector2 inputRot;
     public float velCamina = 10f;
+    public float VelRot = 200.0f;
     public float SenM = 1f;
     Transform Cam;
     float rotX;
+    
+    
+    private  Animator anim;
 
 
     // Start is called before the first frame update
@@ -19,6 +23,9 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         Cam = transform.GetChild(0);
         rotX = Cam.eulerAngles.x;
+
+        anim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -37,10 +44,13 @@ public class PlayerController : MonoBehaviour
     {
         float vel = velCamina;
         rb.velocity =
-            transform.forward * vel * inputMov.y
-            + transform.right * vel * inputMov.x
-            ;
+            transform.forward * vel * inputMov.y;
+            transform.Rotate(0, inputMov.x * Time.deltaTime * VelRot, 0);
 
+        //animacion
+
+        anim.SetFloat("VelX", inputMov.x);
+        anim.SetFloat("VelY", inputMov.y);
 
 
         //cambiar position con rotacion
