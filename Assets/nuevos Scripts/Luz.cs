@@ -9,7 +9,9 @@ public class Luz : MonoBehaviour
     public GameObject luz2;
     public GameObject interructor;
 
-    public bool isTrigger;
+
+    public bool Encendido;
+    public bool EncenderLuz;
 
     
     // Start is called before the first frame update
@@ -25,29 +27,33 @@ public class Luz : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (isTrigger == true)
-        {
-            if (Input.GetKeyDown(KeyCode.E)){
-                luz1.gameObject.SetActive(true);
-                luz2.gameObject.SetActive(true);
-            }
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                luz1.gameObject.SetActive(false);
-                luz2.gameObject.SetActive(false);
 
-            }
+        if (Input.GetKeyDown(KeyCode.E) && Encendido == false && EncenderLuz == true)
+        {
+            luz1.gameObject.SetActive(true);
+            luz2.gameObject.SetActive(true);
+
+            Encendido = true;
         }
+
+        else if (Input.GetKeyDown(KeyCode.E) && Encendido == true && EncenderLuz == true)
+        {
+            luz1.gameObject.SetActive(false);
+            luz2.gameObject.SetActive(false);
+
+            Encendido = false;
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        isTrigger = true;
+        EncenderLuz = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        isTrigger = false;
+        EncenderLuz = false;
     }
 
 }

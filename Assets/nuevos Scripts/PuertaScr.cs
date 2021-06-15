@@ -25,13 +25,13 @@ public class PuertaScr : MonoBehaviour
             transform.Rotate(direcction * speed);
         }
 
-        if (Input.GetButtonDown("Fire1") && abrir == false && puedeAbrir == true)
+        if (Input.GetKeyDown(KeyCode.E) && abrir == false && puedeAbrir == true)
         {
             angle = 90;
             direcction = Vector3.up;
             abrir = true;
         }
-        else if (Input.GetButtonDown("Fire1") && abrir == true && puedeAbrir == true)
+        else if (Input.GetKeyDown(KeyCode.E) && abrir == true && puedeAbrir == true)
         {
             angle = 0;
             direcction = Vector3.down;
