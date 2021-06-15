@@ -7267,7 +7267,7 @@ MonoBehaviour:
       colorBlindnessType: 0
       colorBlindnessStrength: 1
   m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
+  m_ShowToolkit: 1
   m_ShowCustomSorter: 0
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
@@ -31417,6 +31417,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: -8597722455812463843, guid: 2bf9f07bc920ae545a063cc67ccd08f2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 839fe44aeada93f4fac07fc04cb7146a, type: 2}
+    - target: {fileID: -8526421028771140851, guid: 2bf9f07bc920ae545a063cc67ccd08f2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 839fe44aeada93f4fac07fc04cb7146a, type: 2}
     - target: {fileID: -8456323380748859489, guid: 2bf9f07bc920ae545a063cc67ccd08f2, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -31501,6 +31509,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: -4397364203454119114, guid: ac0b7a8cc30e94b4fa64490c58dedbfa, type: 3}
+    - target: {fileID: -4330226421531620391, guid: 2bf9f07bc920ae545a063cc67ccd08f2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 839fe44aeada93f4fac07fc04cb7146a, type: 2}
     - target: {fileID: -3960243712582769797, guid: 2bf9f07bc920ae545a063cc67ccd08f2, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -31645,6 +31657,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: -4397364203454119114, guid: ac0b7a8cc30e94b4fa64490c58dedbfa, type: 3}
+    - target: {fileID: 4439970523694175124, guid: 2bf9f07bc920ae545a063cc67ccd08f2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 839fe44aeada93f4fac07fc04cb7146a, type: 2}
     - target: {fileID: 4502448507938380981, guid: 2bf9f07bc920ae545a063cc67ccd08f2, type: 3}
       propertyPath: m_IsActive
       value: 0
