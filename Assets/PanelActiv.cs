@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PanelActiv : MonoBehaviour
 {
-    public GameObject Panel;
     public GameObject Text;
     public GameObject Trigger;
 
@@ -17,24 +16,21 @@ public class PanelActiv : MonoBehaviour
     void Start()
     {
 
-        Panel.gameObject.SetActive(false);
         Text.gameObject.SetActive(false);
     }
 
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.E) && Mostrando == false && MostrarInfo == true)
+        if (Input.GetKeyDown(KeyCode.I) && Mostrando == false && MostrarInfo == true)
         {
-            Panel.gameObject.SetActive(true);
             Text.gameObject.SetActive(true);
 
             Mostrando = true;
         }
 
-        else if (Input.GetKeyDown(KeyCode.E) && Mostrando == true && MostrarInfo == true)
+        else if (Input.GetKeyDown(KeyCode.I) && Mostrando == true && MostrarInfo == true)
         {
-            Panel.gameObject.SetActive(false);
             Text.gameObject.SetActive(false);
 
             Mostrando = false;
